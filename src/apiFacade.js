@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/jpareststarter";
+const URL = "http://localhost:8080/SolidCode-BackEnd";
  
 function handleHttpErrors(res) {
  if (!res.ok) {
@@ -35,7 +35,7 @@ const login = (user, password) => {
   }
 const fetchData = () => { const options = makeOptions("GET",true); //True add's the token
 return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
-console.log(options)
+
 }
 const makeOptions= (method,addToken,body) =>{
    var opts = {

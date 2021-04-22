@@ -1,6 +1,15 @@
 import React, { useState,useEffect } from "react"
 import facade from "./apiFacade";
-import MyComponent from "./test";
+import test, {MyComponents,getNorris} from "./test";
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import BasicExample from "./Route";
 
 function LogIn({ login }) {
   const init = { username: "", password: "" };
@@ -37,10 +46,14 @@ function LoggedIn() {
    [])
  
   return (
+    <>
+    
     <div>
       <h2>Data Received from server</h2>
       <h3>{dataFromServer}</h3>
     </div>
+    <BasicExample/>
+</>
   )
  
 }
@@ -62,7 +75,6 @@ function App() {
  
   return (
     <div>
-      <MyComponent/>
       {!loggedIn ? (<LogIn login={login} />) :
         (<div>
           <LoggedIn />
