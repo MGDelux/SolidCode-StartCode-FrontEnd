@@ -6,7 +6,7 @@ import {
     NavLink,
     Link
   } from "react-router-dom";
-  import {MyComponent,GetNorris}from "./test.js";
+  import {MyComponent,GetNorris, Getrandom, Starwars,CatFact}from "./test.js";
 
   export default function BasicExample() {
     return (
@@ -30,7 +30,7 @@ import {
             <NavLink exact activeClassName="selected" to="/Endpoint4">Starwars ships</NavLink>
             </li>
             <li>
-            <NavLink exact activeClassName="selected" to="/Endpoint5">Starwars4</NavLink>
+            <NavLink exact activeClassName="selected" to="/Endpoint5">Cat Fact</NavLink>
             </li>
           </ul>
   
@@ -103,6 +103,7 @@ import {
       return (
         <div>
           <h2>Random joke</h2>
+          <Getrandom/>
         </div>
       );
     }
@@ -110,13 +111,15 @@ import {
       return (
         <div>
           <h2>Starwars ships</h2>
+          <Starwars/>
         </div>
       );
   }
   function Endpoint5() {
     return (
       <div>
-        <h2>Dashboard</h2>
+        <h2>Cat fact</h2>
+        <CatFact/>
       </div>
     );
 }

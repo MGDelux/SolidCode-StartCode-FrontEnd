@@ -115,6 +115,177 @@ import Table from 'react-bootstrap/Table';
       );
     }
   }
+  
+  
+  function Getrandom() {
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
+ 
+    useEffect(() => {
+      fetch("http://localhost:8080/SolidCode-BackEnd/api/dummyAPI/5endPoints")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setIsLoaded(true);
+            setItems(result);
+            console.log(result);
+          },
+          (error) => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        )
+    }, [])
+  
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        
+        <table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">joke</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map(item => (
+            <>
+          <tr>  
+            <td key={item.random_Joke.id}>{item.random_Joke.id}</td>
+            <td key={item.random_Joke.joke}>{item.random_Joke.joke}</td>
+          </tr>
+           </>
+          ))}
+          </tbody>
+          </table>
+      );
+    }
+  }
+
+
+  function Starwars() {
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
+ 
+    useEffect(() => {
+      fetch("http://localhost:8080/SolidCode-BackEnd/api/dummyAPI/5endPoints")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setIsLoaded(true);
+            setItems(result);
+            console.log(result);
+          },
+          (error) => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        )
+    }, [])
+  
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        
+        <table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Model</th>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Cost_in_credits</th>
+            <th scope="col">Length</th>
+            <th scope="col">Crew</th>
+            <th scope="col">Hyperdrive_rating</th>
+            <th scope="col">Pilots</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map(item => (
+            <>
+          <tr>  
+            <td key={item.starWarsShip_INFO.name}>{item.starWarsShip_INFO.name  }</td>
+            <td key={item.starWarsShip_INFO.model}>{item.starWarsShip_INFO.joke}</td>
+            <td key={item.starWarsShip_INFO.manufacturer}>{item.starWarsShip_INFO.manufacturer}</td>
+            <td key={item.starWarsShip_INFO.cost_in_credits}>{item.starWarsShip_INFO.cost_in_credits}</td>
+            <td key={item.starWarsShip_INFO.length}>{item.starWarsShip_INFO.length}</td>
+            <td key={item.starWarsShip_INFO.crew}>{item.starWarsShip_INFO.crew}</td>
+            <td key={item.starWarsShip_INFO.hyperdrive_rating}>{item.starWarsShip_INFO.hyperdrive_rating}</td>
+            <td key={item.starWarsShip_INFO.pilots}>{item.starWarsShip_INFO.pilots}</td>
+          </tr>
+           </>
+          ))}
+          </tbody>
+          </table>
+      );
+    }
+  }
+
+  function CatFact() {
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
+ 
+    useEffect(() => {
+      fetch("http://localhost:8080/SolidCode-BackEnd/api/dummyAPI/5endPoints")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setIsLoaded(true);
+            setItems(result);
+            console.log(result);
+          },
+          (error) => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        )
+    }, [])
+  
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        
+        <table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">Info</th>
+            <th scope="col">CreatedAt</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map(item => (
+            <>
+          <tr>  
+            <td key={item.catFact._id}>{item.catFact.id}</td>
+            <td key={item.catFact.text}>{item.catFact.text}</td>
+            <td key={item.catFact.createdAt}>{item.catFact.createdAt}</td>
+          </tr>
+           </>
+          ))}
+          </tbody>
+          </table>
+      );
+    }
+  }
+
 
   export {GetNorris};
   export {MyComponent};
+  export {Getrandom};
+  export {Starwars};
+  export {CatFact};
+
