@@ -1,11 +1,6 @@
 import React, { useState,useEffect } from "react"
-import Table from 'react-bootstrap/Table';
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-  crossorigin="anonymous"
-/>
+import "bootstrap/dist/css/bootstrap.min.css"
+import {button, Breadcrumb, Card, Form, Container, Row, Col,Table} from "react-bootstrap"
   
   function MyComponent() {
     const [error, setError] = useState(null);
@@ -34,8 +29,8 @@ import Table from 'react-bootstrap/Table';
       return <div>Loading...</div>;
     } else {
       return (
-        
-        <table striped bordered hover variant="dark">
+        <container className="themed-container" fluid="md">
+        <Table striped bordered hover variant="dark" responsive>
         <thead>
           <tr>
           <th scope="col">#ID</th>
@@ -47,7 +42,7 @@ import Table from 'react-bootstrap/Table';
         <tbody>
           {items.map(item => (
             <>
-          <tr>  
+          <tr >  
             <td key={item.id}>
             {item.id}
             </td>
@@ -58,7 +53,8 @@ import Table from 'react-bootstrap/Table';
            </>
           ))}
           </tbody>
-          </table>
+          </Table>
+          </container>
       );
     }
   }
@@ -92,7 +88,7 @@ import Table from 'react-bootstrap/Table';
     } else {
       return (
         
-        <table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark">
         <thead>
           <tr>
             <th scope="col">#ID</th>
@@ -105,13 +101,13 @@ import Table from 'react-bootstrap/Table';
             <>
           <tr>  
             <td key={item.chuck_Joke.id}>{item.chuck_Joke.id}</td>
-            <td key={item.chuck_Joke.value}>{item.chuck_Joke.value}</td>
-            <td key={item.chuck_Joke.url}>{item.chuck_Joke.url}</td>
+            <td>{item.chuck_Joke.value}</td>
+            <td>{item.chuck_Joke.url}</td>
           </tr>
            </>
           ))}
           </tbody>
-          </table>
+          </Table>
       );
     }
   }
@@ -145,7 +141,7 @@ import Table from 'react-bootstrap/Table';
     } else {
       return (
         
-        <table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark">
         <thead>
           <tr>
             <th scope="col">#ID</th>
@@ -157,12 +153,12 @@ import Table from 'react-bootstrap/Table';
             <>
           <tr>  
             <td key={item.random_Joke.id}>{item.random_Joke.id}</td>
-            <td key={item.random_Joke.joke}>{item.random_Joke.joke}</td>
+            <td>{item.random_Joke.joke}</td>
           </tr>
            </>
           ))}
           </tbody>
-          </table>
+          </Table>
       );
     }
   }
@@ -196,7 +192,7 @@ import Table from 'react-bootstrap/Table';
     } else {
       return (
         
-        <table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark">
         <thead>
           <tr>
             <th scope="col">Name</th>
@@ -225,7 +221,7 @@ import Table from 'react-bootstrap/Table';
            </>
           ))}
           </tbody>
-          </table>
+          </Table>
       );
     }
   }
@@ -258,7 +254,7 @@ import Table from 'react-bootstrap/Table';
     } else {
       return (
         
-        <table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark">
         <thead>
           <tr>
             <th scope="col">#ID</th>
@@ -271,13 +267,13 @@ import Table from 'react-bootstrap/Table';
             <>
           <tr>  
             <td key={item.catFact._id}>{item.catFact.id}</td>
-            <td key={item.catFact.text}>{item.catFact.text}</td>
-            <td key={item.catFact.createdAt}>{item.catFact.createdAt}</td>
+            <td>{item.catFact.text}</td>
+            <td>{item.catFact.createdAt}</td>
           </tr>
            </>
           ))}
           </tbody>
-          </table>
+          </Table>
       );
     }
   }

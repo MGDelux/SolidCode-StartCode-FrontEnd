@@ -24,3 +24,11 @@ ul.header {
   .selected {
     background-color: #4caf50;
   }
+
+  .login-form{
+    width: 100%;
+    max-width: 330px;
+    padding: 15;
+    margin: auto;
+    height: 100%;
+    }
