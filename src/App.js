@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react"
+import React, { useState,useEffect, Component } from "react"
 import facade from "./apiFacade";
 import test, {MyComponents,getNorris} from "./test";
 import {button, Breadcrumb, Card, Form, Container, Row, Col,Table} from "react-bootstrap"
@@ -26,10 +26,10 @@ function LogIn({ login }) {
   }
  
   return (
-  <Container>
+  <Container container-md>
     <div classname= "w-responsive text-center mx-auto p-3 mt-2">
      <Card classname="mb-3">
-       <Card.Img src="https://miro.medium.com/max/1000/1*TjDnfpnw4gI8sZ2fvaK9zg.jpeg"/>
+       <Card.Img width="70%" src="https://miro.medium.com/max/1000/1*TjDnfpnw4gI8sZ2fvaK9zg.jpeg"/>
        <Card.Body>
       <form classname="login-form" onChange={onChange}>
         <Card.Title>
@@ -62,7 +62,6 @@ function LogIn({ login }) {
 }
 function LoggedIn() {
   const [dataFromServer, setDataFromServer] = useState("Loading...")
-  
   useEffect(
     () => {
     facade.fetchData().then(data=> setDataFromServer(data.msg));
@@ -81,8 +80,6 @@ function LoggedIn() {
   )
  
 }
- 
-
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
