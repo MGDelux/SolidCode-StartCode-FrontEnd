@@ -46,9 +46,7 @@ import {button, Breadcrumb, Card, Form, Container, Row, Col,Table} from "react-b
             <td key={item.id}>
             {item.id}
             </td>
-            <td>{item.name}</td>
-            <td>{item.date.date.year}/{item.date.date.month}/{item.date.date.day}  </td>
-            <td>{item.date.time.hour}:{item.date.time.minute}:{item.date.time.second}</td>
+            <td>{item.dtoName}</td>
             </tr>
            </>
           ))}
