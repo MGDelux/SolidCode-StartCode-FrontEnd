@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 <h1>Hello possible 3rd semester student that might be looking for "inspiration" ;) read below: </h1>
 <h2>MASTER BRANCH IS USING THE PROVIDED START CODE FROM OUR TEACHERS SLIGHTLY MODIFIED FOR WHAT WE NEEDED DURING 3RD SEMESTER</h2>
-<h2 style="color: red">V2 BRANCH IS AN WORK IN PROGRESS WITH MORE A FEATURE RICH FRONT END, THAT STILL WORKS WITH 3RD SEMESTER REQUIRMENTS BUT IS MORE "ADVANCED" AND IS EXPERIMENTAL </h2><h3>Both 'versions' still only uses default bootstrap dependencies </h3>
+<h2 style="color: red">V3 BRANCH IS AN WORK IN PROGRESS WITH MORE A FEATURE RICH FRONT END, THAT STILL WORKS WITH 3RD SEMESTER REQUIRMENTS BUT IS MORE "ADVANCED" AND IS EXPERIMENTAL </h2><h3>Both 'versions' still only uses default bootstrap dependencies </h3>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
