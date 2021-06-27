@@ -1,0 +1,118 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.login-wrapper img{
+   text-align: center;
+    width: 150px;
+    
+}
+
+.login-wrapper h3{
+    text-align: center;
+}
+ a{
+    text-align: left;
+    color: blue;
+}
+.login-wrapper input{
+    border: 0.5px solid rgb(139, 139, 139);
+    border-radius: 2%;
+    height: 25px;
+    width: 255px;
+}
+
+a:hover{
+    text-align: left;
+    color: rgb(89, 0, 255);
+}
+
+.forgot-password a {
+    color: black;
+    text-align: right;
+    font-size: smaller;
+    padding-right: 155px;
+}
+
+.forgot-password a:hover {
+    color: rgb(17, 0, 255);
+    text-align: right;
+    font-size: smaller;
+    padding-right: 155px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-Form button{
+    background: rgb(0,180,232);
+    background: -moz-linear-gradient(180deg, rgba(0,180,232,1) 0%, rgba(16,183,231,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,180,232,1) 0%, rgba(16,183,231,1) 100%);
+    background: linear-gradient(180deg, rgba(0,180,232,1) 0%, rgba(16,183,231,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00b4e8",endColorstr="#10b7e7",GradientType=1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.login-Form button:hover{
+    background: rgb(2, 172, 219);
+    background: -moz-linear-gradient(180deg, rgba(0,180,232,1) 0%, rgb(13, 169, 212) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,180,232,1) 0%, rgb(16, 172, 216) 100%);
+    background: linear-gradient(180deg, rgba(0,180,232,1) 0%, rgb(12, 160, 200) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00b4e8",endColorstr="#10b7e7",GradientType=1);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+    cursor: pointer;
+
+}
+.button-submit{
+    text-align: center;
+}
+
+.button-submit{
+    padding-top: 10%;
+   
+}
+.login-container{
+    background: rgb(245,247,247);
+    background: -moz-linear-gradient(180deg, rgba(245,247,247,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(245,247,247,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(245,247,247,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5f7f7",endColorstr="#ffffff",GradientType=1);
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 5%;
+    border: 3px solid black;
+    
+}
+
+.login-Form{
+}
+
+body, html{
+    background-image: url(https://i.imgur.com/RxOasQ5.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+
+}
+
+.aREF{
+    text-align: left;
+}
